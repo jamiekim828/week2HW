@@ -1,5 +1,5 @@
 const assert = require("assert")
-const ShoppingCart = require("ShoppingCart")
+const {ShoppingCart} = require("./shoppingcart.js")
 
 describe("Assignment 1 - ShoppingCart", function() {
 

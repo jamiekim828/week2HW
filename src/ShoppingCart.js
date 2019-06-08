@@ -1,9 +1,10 @@
+
 class ShoppingCart {
     constructor(name,quantity,pricePerUnit) {
         this.name = name
         this.quantity = quantity
         this.pricePerUnit = pricePerUnit
-        this.cart = []
+        this.ShoppingCart = []
     }
     addItem(name,quantity,pricePerUnit) {
         return cart.push(name,quantity,pricePerUnit)
@@ -21,4 +22,5 @@ class ShoppingCart {
 }
 
 
-module.exports = ShoppingCart
+
+module.exports = {ShoppingCart}
