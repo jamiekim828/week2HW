@@ -1,31 +1,32 @@
 const groupAdultsByAgeRange = (people, name, age) => {
     return people
-    .filter((people) => people.age > 18)
-    .reduce((category, people) => {
+    .filter(() => {})
+    .reduce((grouped, people) => {
         if(people.age <= 20) {
-            category.nameof().push(people)
+            grouped[0].push(people)
         }
         if(people.age > 21 && people.age <= 30) {
-            category.nameof("21-30").push(people)
+            grouped[1].push(people)
         }
         if(people.age > 31 && people.age <= 40) {
-            category.nameof(31-40).push(people)
+            grouped[2].push(people)
         }
         if(people.age > 41 && people.age <= 50) {
-            category.nameof("41-50").push(people)
+            grouped[3].push(people)
         }
         if(people.age >= 51) {
-            category.nameof("51 and older").push(people)
+            grouped[4].push(people)
         }
         return category
     }, {
-         : [],
-        adult2 : [],
-        adult3 : [],
-        adult4 : [],
-        adult5 : []
+        "20 and younger" : [],
+        "21-30" : [],
+        "31-40" : [],
+        "41-50" : [],
+        "51 and older" : []
     })
 }
+
 
 
 
