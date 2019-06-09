@@ -2,14 +2,14 @@ const fetch = require('node-fetch')
 
 const getTatooineResidents = (url) => {
     fetch('https://swapi.co/api/planets/1/')
-    .then(res => res.body.residents)
-    .then(data => console.log(data))
+    .then(res => res.json())
+    .then(data => data.body.residents)
     .catch(error => console.log(error))
 }
 
-const promiseMeAString = () => {
+const promiseMeAString = (string) => {
     return new Promise((resolve, reject) => {
-        if('I Promise!') resolve("You kept the Promise!")
+        if(string) resolve("You kept the Promise!")
         else 
             reject("You have failed me!")
     })
