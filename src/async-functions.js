@@ -1,10 +1,10 @@
 const fetch = require('node-fetch')
 
-const getTatooineResidents = (url) => {
+const getTatooineResidents = () => {
     fetch('https://swapi.co/api/planets/1/')
     .then(res => res.json())
-    .then(data => data.body.residents)
-    .catch(error => console.log(error))
+    .then(planets1 => console.log(planets1.residents))
+    .catch(err => console.log(err))
 }
 
 const promiseMeAString = (string) => {
