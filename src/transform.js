@@ -4,7 +4,7 @@ const groupAdultsByAgeRange = (people) => {
     group0 = []
 
     var group1 = people
-    .filter(person => person.age <= 20 && person.age > 18)
+    .filter(person => person.age <= 20 && person.age >= 18)
     var group2 = people
     .filter(person => person.age >= 21 && person.age <= 30)
     var group3 = people
